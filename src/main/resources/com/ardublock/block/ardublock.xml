@@ -8776,6 +8776,70 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		
+		
+		<BlockGenus name="evshield_init" kind="command" color="255 102 0" initlabel="bg.evshield_init">
+			<description>
+				<text>EVShield Initialize</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/evshield/evshield.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="evshield_SH_BAS1" kind="data" color="77 191 169" initlabel="bg.evshield_SH_BAS1">
+			<description>
+				<text>evshield_SH_BAS1</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="evshield_SH_BAS2" kind="data" color="77 191 169" initlabel="bg.evshield_SH_BAS2">
+			<description>
+				<text>evshield_SH_BAS2</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="evshield_SH_BBS1" kind="data" color="77 191 169" initlabel="bg.evshield_SH_BBS1">
+			<description>
+				<text>evshield_SH_BBS1</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="evshield_SH_BBS2" kind="data" color="77 191 169" initlabel="bg.evshield_SH_BBS2">
+			<description>
+				<text>evshield_SH_BBS2</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="evshield_touch" kind="data" color="255 102 0" initlabel="bg.evshield_touch">
+			<description>
+				<text>EVShield Touch Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="port">
+					<DefaultArg genus-name="evshield_SH_BAS1" label="Bank A Sensor 1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/evshield/evshield.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 
 	</BlockGenuses>
 
@@ -9141,6 +9205,12 @@
 			<FamilyMember>Midi_AS</FamilyMember>
 			<FamilyMember>Midi_B</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>evshield_SH_BAS1</FamilyMember>
+			<FamilyMember>evshield_SH_BAS2</FamilyMember>
+			<FamilyMember>evshield_SH_BBS1</FamilyMember>
+			<FamilyMember>evshield_SH_BBS2</FamilyMember>
+		</BlockFamily>
 		
 	</BlockFamilies>
 
@@ -9288,7 +9358,7 @@
 				<BlockGenusMember>df_lcd_keypad</BlockGenusMember>
 				<BlockGenusMember>df_lcd_keypad_clear</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
+			<!--<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_release</BlockGenusMember>
@@ -9296,8 +9366,14 @@
 				<BlockGenusMember>ada_neopixel_pixel_colorRGB</BlockGenusMember>
 				<BlockGenusMember>ada_neopixel_show</BlockGenusMember>	
 				<BlockGenusMember>ada_neopixel_Brightness</BlockGenusMember>
-			</BlockDrawer>
+			</BlockDrawer>-->
 			<BlockDrawer button-color="236 122 122" name="bd.evshield" type="factory">
+				<BlockGenusMember>evshield_init</BlockGenusMember>
+				<BlockGenusMember>evshield_SH_BAS1</BlockGenusMember>
+				<BlockGenusMember>evshield_SH_BAS2</BlockGenusMember>
+				<BlockGenusMember>evshield_SH_BBS1</BlockGenusMember>
+				<BlockGenusMember>evshield_SH_BBS2</BlockGenusMember>
+				<BlockGenusMember>evshield_touch</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
