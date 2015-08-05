@@ -8806,6 +8806,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
+		
 		<BlockGenus name="evshield_SH_BBS1" kind="data" color="77 191 169" initlabel="bg.evshield_SH_BBS1">
 			<description>
 				<text>evshield_SH_BBS1</text>
@@ -8832,6 +8833,101 @@
 					<DefaultArg genus-name="evshield_SH_BAS1" label="Bank A Sensor 1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/evshield/evshield.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="evshield_light" kind="data" color="255 102 0" initlabel="bg.evshield_light">
+			<description>
+				<text>EVShield Light Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="port">
+					<DefaultArg genus-name="evshield_SH_BAS2" label="Bank A Sensor 2"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/evshield/evshield.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="evshield_ir" kind="data" color="255 102 0" initlabel="bg.evshield_ir">
+			<description>
+				<text>EVShield Infrared</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="port">
+					<DefaultArg genus-name="evshield_SH_BAS2" label="Bank A Sensor 2"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/evshield/evshield.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		
+		<BlockGenus name="evshield_bank_a" kind="data" color="77 191 169" initlabel="bg.evshield_bank_a">
+			<description>
+				<text>Bank A</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="evshield_bank_b" kind="data" color="77 191 169" initlabel="bg.evshield_bank_b">
+			<description>
+				<text>Bank B</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
+		<BlockGenus name="evshield_SH_Motor_1" kind="data" color="77 191 169" initlabel="bg.evshield_SH_Motor_1">
+			<description>
+				<text>Motor 1</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
+		<BlockGenus name="evshield_SH_Motor_2" kind="data" color="77 191 169" initlabel="bg.evshield_SH_Motor_2">
+			<description>
+				<text>Motor 2</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="evshield_motor_speed" kind="command" color="255 102 0" initlabel="bg.evshield_motor_speed">
+			<description>
+				<text>EVShield Motor Speed</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bank">
+					<DefaultArg genus-name="evshield_bank_a" label="Bank A"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="motor">
+					<DefaultArg genus-name="evshield_SH_Motor_1" label="Motor 1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="speed">
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -9211,6 +9307,14 @@
 			<FamilyMember>evshield_SH_BBS1</FamilyMember>
 			<FamilyMember>evshield_SH_BBS2</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>evshield_bank_a</FamilyMember>
+			<FamilyMember>evshield_bank_b</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>evshield_SH_Motor_1</FamilyMember>
+			<FamilyMember>evshield_SH_Motor_2</FamilyMember>
+		</BlockFamily>
 		
 	</BlockFamilies>
 
@@ -9374,6 +9478,13 @@
 				<BlockGenusMember>evshield_SH_BBS1</BlockGenusMember>
 				<BlockGenusMember>evshield_SH_BBS2</BlockGenusMember>
 				<BlockGenusMember>evshield_touch</BlockGenusMember>
+				<BlockGenusMember>evshield_light</BlockGenusMember>
+				<BlockGenusMember>evshield_ir</BlockGenusMember>
+				<BlockGenusMember>evshield_motor_speed</BlockGenusMember>
+				<BlockGenusMember>evshield_bank_a</BlockGenusMember>
+				<BlockGenusMember>evshield_bank_b</BlockGenusMember>
+				<BlockGenusMember>evshield_SH_Motor_1</BlockGenusMember>
+				<BlockGenusMember>evshield_SH_Motor_2</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
